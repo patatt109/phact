@@ -1,6 +1,6 @@
 {
-  "name": "phact-cmf/phact",
-  "homepage": "https://github.com/phact-cmf/phact",
+  "name": "patatt109/phact",
+  "homepage": "https://github.com/patatt109/phact",
   "description": "Compact MVC framework",
   "type": "library",
   "license": "MIT",
@@ -58,9 +58,5 @@
       "email": "qantus@mail.ru",
       "role": "Developer"
     }
-  ],
-  "support": {
-    "email": "qantus@mail.ru",
-    "issues": "https://github.com/phact-cmf/phact?state=open"
-  }
+  ]
 }
