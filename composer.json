@@ -1,6 +1,6 @@
 {
-  "name": "patatt109/phact",
-  "homepage": "https://github.com/patatt109/phact",
+  "name": "phact-cmf/phact",
+  "homepage": "https://github.com/phact-cmf/phact",
   "description": "Compact MVC framework",
   "type": "library",
   "license": "MIT",
