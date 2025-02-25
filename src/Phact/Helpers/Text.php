@@ -42,7 +42,7 @@ class Text
 
     public static function removePrefix($prefix, $text)
     {
-        if (0 === mb_strpos($text, $prefix, null, 'UTF-8')) {
+        if (0 === mb_strpos($text, $prefix, 0, 'UTF-8')) {
             $text = (string) mb_substr($text, strlen($prefix), null, 'UTF-8');
         }
         return $text;

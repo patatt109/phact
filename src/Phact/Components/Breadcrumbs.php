@@ -104,7 +104,7 @@ class Breadcrumbs implements BreadcrumbsInterface
             }
             $name = (string) $name;
         }
-        if ($url && mb_strpos($url, '/', null, 'UTF-8') === false && mb_strpos($url, ':', null, 'UTF-8') >= 0 && $this->_router) {
+        if ($url && mb_strpos($url, '/', 0, 'UTF-8') === false && mb_strpos($url, ':', 0, 'UTF-8') >= 0 && $this->_router) {
             $url = $this->_router->url($url, $params);
         }
         $item = [
