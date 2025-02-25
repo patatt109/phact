@@ -90,7 +90,7 @@ class PhactFenomTemplateProvider implements ProviderInterface
      * @param int $time load last modified time
      * @return string
      */
-    public function getSource($tpl, &$time)
+    public function getSource(string $tpl, float &$time): string
     {
         $tpl = $this->_getTemplatePath($tpl);
         if($this->_clear_cache) {
@@ -105,7 +105,7 @@ class PhactFenomTemplateProvider implements ProviderInterface
      * @param string $tpl
      * @return int
      */
-    public function getLastModified($tpl)
+    public function getLastModified(string $tpl): float
     {
         $tpl = $this->_getTemplatePath($tpl);
         if($this->_clear_cache) {
@@ -120,7 +120,7 @@ class PhactFenomTemplateProvider implements ProviderInterface
      * @param string $extension all templates must have this extension, default .html
      * @return array|\Iterator
      */
-    public function getList($extension = "html")
+    public function getList($extension = "html"): iterable
     {
         $list = array();
         foreach ($this->_paths as $path) {
@@ -161,7 +161,7 @@ class PhactFenomTemplateProvider implements ProviderInterface
      * @param string $tpl
      * @return bool
      */
-    public function templateExists($tpl)
+    public function templateExists($tpl): bool
     {
         foreach ($this->_paths as $path) {
             if (($templatePath = realpath($path . DIRECTORY_SEPARATOR . $tpl)) && strpos($templatePath, $path) === 0) {
@@ -177,7 +177,7 @@ class PhactFenomTemplateProvider implements ProviderInterface
      * @param array $templates [template_name => modified, ...] By conversation, you may trust the template's name
      * @return bool
      */
-    public function verify(array $templates)
+    public function verify(array $templates): bool
     {
 
         foreach ($this->_paths as $path) {
